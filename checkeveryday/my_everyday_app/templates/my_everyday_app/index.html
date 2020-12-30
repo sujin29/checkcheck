@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkeveryday</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        .title {
+            color: white;
+            width: 500px;
+            height: 100px;
+            background-image: url('https://images.pexels.com/photos/266526/pexels-photo-266526.jpeg');
+            background-position: center;
+            background-size: cover;
+
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 15px;
+
+            margin: 30px;
+        }
+        .wrap {
+            margin: 10px auto;
+            width: 500px;
+        }
+        .register_btn {
+            width: 60px;
+            height: 35px;
+
+            background-color: gray;
+
+            border-radius: 10px;
+
+        }
+        .register_hab {
+            width: 500px;
+            margin: 10px auto;
+            padding: 0px 0px 0px 120px;
+        }
+        .form-control {
+            width: 230px;
+            height: 30px ;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="title">
+        <h1>습관 등록하기</h1>
+    </div>
+
+    <div class="register_hab">
+        <form action="./createHabbit/" method="POST">{% csrf_token %}
+            🔥 <input type="text" id="habTitle" name="habTitle" class="form-control"
+                     placeholder="습관 이름을 적어주세요!"/>
+            <button class="register_btn">등록</button>
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>
