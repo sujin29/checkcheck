@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard</title>
+    <style>
+        .list-group {
+            color: black;
+
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="list-group">
+            {% for habbit in habbits %}
+            <li class="list-group-item">{{ habbit.hab_title }}</li>
+            <input type="number"></input>
+            <input type="checkbox"></input>
+            <input type="hidden" id="habbitNum" name="habbitNum" value="{{ habbit.id }}"></input>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
