@@ -60,11 +60,11 @@
         <form action="./createHabbit/" method="POST">{% csrf_token %}
             🔥 <input type="text" id="habTitle" name="habTitle" class="form-control"
                          placeholder="습관 이름을 적어주세요!"/>
-            <select class="record-method" name="record-method">
+            <select class="record-method" id="habMethod" name="habMethod">
                 <option value="">기록 방법 선택</option>
                 <option value="ox">OX만</option>
                 <option value="hour">시간으로 (ex:2시간)</option>
-                <option value="minute">분으로 (ex:30분)</option>
+                <option value="min">분으로 (ex:30분)</option>
             </select>
             <button class="register_btn">등록</button>
         </form>
